@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameZone | Seu Blog de Games</title>
+    <style>
+        /* Estilos Gerais (Visual Gamer) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #121214;
+            color: #e1e1e6;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #00e676;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #202024;
+            border-bottom: 2px solid #00e676;
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            color: #00e676;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            color: #e1e1e6;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #00e676;
+            text-decoration: none;
+        }
+
+        /* Layout Principal */
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Feed de Posts */
+        .post {
+            background-color: #202024;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 2rem;
+            border: 1px solid #29292e;
+        }
+
+        .post img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .post-content {
+            padding: 1.5rem;
+        }
+
+        .tag {
+            background-color: #00e676;
+            color: #121214;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .post h2 {
+            margin: 0.8rem 0;
+            color: #ffffff;
+        }
+
+        .post-meta {
+            font-size: 0.85rem;
+            color: #8d8d99;
+            margin-bottom: 1rem;
+        }
+
+        .post p {
+            color: #c4c4cc;
+            margin-bottom: 1rem;
+        }
+
+        /* Barra Lateral (Sidebar) */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .widget {
+            background-color: #202024;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #29292e;
+        }
+
+        .widget h3 {
+            color: #00e676;
+            margin-bottom: 1rem;
+            border-bottom: 1px solid #29292e;
+            padding-bottom: 0.5rem;
+        }
+
+        .widget ul {
+            list-style: none;
+        }
+
+        .widget li {
+            margin-bottom: 0.8rem;
+        }
+
+        /* Rodapé */
+        footer {
+            background-color: #202024;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            border-top: 1px solid #29292e;
+            color: #8d8d99;
+        }
+
+        /* Responsividade para Celulares */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>🎮 GameZone</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Análises</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Lançamentos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        
+        <main>
+            
+            <article class="post">
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Setup Gamer">
+                <div class="post-content">
+                    <span class="tag">Análise</span>
+                    <h2>Os jogos mais aguardados do ano</h2>
+                    <div class="post-meta">Publicado em 10 de Outubro por <strong>Alex</strong></div>
+                    <p>O ano está cheio de grandes lançamentos! Preparamos uma lista completa com os títulos mais promissores que prometem redefinir o mundo dos games nesta temporada...</p>
+                    <a href="#">Leia mais &rarr;</a>
+                </div>
+            </article>
+
+            <article class="post">
+                <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?auto=format&fit=crop&w=800&q=80" alt="Jogo de PC">
+                <div class="post-content">
+                    <span class="tag">Dicas</span>
+                    <h2>Como otimizar seu PC para jogos pesados</h2>
+                    <div class="post-meta">Publicado em 08 de Outubro por <strong>Alex</strong></div>
+                    <p>Está sofrendo com quedas de FPS? Siga este guia rápido com configurações simples de sistema e placas de vídeo para extrair o máximo de desempenho do seu setup.</p>
+                    <a href="#">Leia mais &rarr;</a>
+                </div>
+            </article>
+
+        </main>
+
+        <aside>
+            
+            <div class="widget">
+                <h3>Sobre o Blog</h3>
+                <p>O GameZone é seu portal definitivo para notícias, análises de jogos, tutoriais e tudo sobre o universo dos eSports.</p>
+            </div>
+
+            <div class="widget">
+                <h3>Mais Lidos</h3>
+                <ul>
+                    <li><a href="#">Top 10 Melhores

@@ -1,0 +1,218 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #121214;
+    color: #e1e1e6;
+    line-height: 1.6;
+}
+
+a {
+    color: #00e676;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #33ff99;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #202024;
+    border-bottom: 2px solid #00e676;
+    padding: 1.2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+header h1 {
+    color: #00e676;
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Campo de Pesquisa */
+.search-box input {
+    background-color: #121214;
+    border: 1px solid #29292e;
+    padding: 0.6rem 1rem;
+    border-radius: 20px;
+    color: #fff;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.search-box input:focus {
+    border-color: #00e676;
+}
+
+/* Navegação */
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: #e1e1e6;
+    font-weight: 600;
+}
+
+nav a.active, nav a:hover {
+    color: #00e676;
+}
+
+/* Layout Principal */
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 2rem;
+}
+
+/* Cartões de Posts */
+.post {
+    background-color: #202024;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border: 1px solid #29292e;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.post:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 230, 118, 0.15);
+}
+
+.post img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+}
+
+.post-content {
+    padding: 1.5rem;
+}
+
+.tag {
+    background-color: #00e676;
+    color: #121214;
+    padding: 0.25rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.post h2 {
+    margin: 0.8rem 0;
+    color: #ffffff;
+}
+
+.post-meta {
+    font-size: 0.85rem;
+    color: #8d8d99;
+    margin-bottom: 1rem;
+}
+
+.post p {
+    color: #c4c4cc;
+    margin-bottom: 1.5rem;
+}
+
+/* Rodapé do Post (Link + Botão de Curtir) */
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #29292e;
+    padding-top: 1rem;
+}
+
+.like-btn {
+    background-color: #29292e;
+    color: #ffffff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.like-btn:hover {
+    background-color: #323238;
+}
+
+.like-btn:active {
+    transform: scale(0.95);
+}
+
+.like-btn.liked {
+    background-color: #e53935;
+    color: #fff;
+}
+
+/* Barra Lateral (Sidebar) */
+aside {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.widget {
+    background-color: #202024;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #29292e;
+}
+
+.widget h3 {
+    color: #00e676;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #29292e;
+    padding-bottom: 0.5rem;
+}
+
+.widget ul {
+    list-style: none;
+}
+
+.widget li {
+    margin-bottom: 0.8rem;
+}
+
+/* Rodapé */
+footer {
+    background-color: #202024;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
+    border-top: 1px solid #29292e;
+    color: #8d8d99;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+}
